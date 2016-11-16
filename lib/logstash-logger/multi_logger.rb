@@ -29,6 +29,8 @@ module LogStashLogger
       @loggers.each do |logger|
         logger.formatter ||= formatter
       end
+
+      @formatter = formatter
     end
 
     def silence(temporary_level = ::Logger::ERROR, &block)
